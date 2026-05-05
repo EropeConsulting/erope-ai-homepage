@@ -74,7 +74,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-card/30 border-t border-border/50 relative overflow-hidden">
+    <section id="contact" className="py-24 bg-muted/30 border-t border-border/50 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/5 blur-[150px] -z-10" />
       
       <div className="container mx-auto px-6">
@@ -86,7 +86,7 @@ export function Contact() {
             transition={{ duration: 0.5 }}
           >
             <h2 className="text-sm font-bold text-primary uppercase tracking-wider mb-2">Contact Us</h2>
-            <h3 className="text-3xl md:text-4xl font-bold text-white">
+            <h3 className="text-3xl md:text-4xl font-bold text-foreground">
               프로젝트 문의하기
             </h3>
             <p className="text-muted-foreground mt-4">
@@ -104,7 +104,7 @@ export function Contact() {
             transition={{ duration: 0.5 }}
           >
             <div>
-              <h4 className="text-xl font-semibold text-white mb-6">Contact Info</h4>
+              <h4 className="text-xl font-semibold text-foreground mb-6">Contact Info</h4>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="bg-primary/20 p-3 rounded-lg text-primary">
@@ -112,7 +112,7 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">이메일</p>
-                    <p className="text-white font-medium">erope3v@gmail.com</p>
+                    <p className="text-foreground font-medium">erope3v@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -121,7 +121,7 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">전화번호</p>
-                    <p className="text-white font-medium">010-6440-8182</p>
+                    <p className="text-foreground font-medium">010-6440-8182</p>
                   </div>
                 </div>
               </div>
@@ -129,7 +129,7 @@ export function Contact() {
           </motion.div>
 
           <motion.div 
-            className="w-full lg:w-2/3 bg-background/50 p-8 rounded-2xl border border-border/50 shadow-xl"
+            className="w-full lg:w-2/3 bg-card p-8 rounded-2xl border border-border/50 shadow-xl"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -138,7 +138,7 @@ export function Contact() {
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm font-medium text-white">이름 / 담당자명</label>
+                  <label htmlFor="name" className="text-sm font-medium text-foreground">이름 / 담당자명</label>
                   <Input 
                     id="name" 
                     placeholder="홍길동" 
@@ -149,7 +149,7 @@ export function Contact() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="company" className="text-sm font-medium text-white">기업명</label>
+                  <label htmlFor="company" className="text-sm font-medium text-foreground">기업명</label>
                   <Input 
                     id="company" 
                     placeholder="Erope.AI" 
@@ -160,7 +160,7 @@ export function Contact() {
                 </div>
               </div>
               <div className="space-y-2">
-                <label htmlFor="email" className="text-sm font-medium text-white">이메일 주소</label>
+                <label htmlFor="email" className="text-sm font-medium text-foreground">이메일 주소</label>
                 <Input 
                   id="email" 
                   type="email" 
@@ -172,7 +172,7 @@ export function Contact() {
                 />
               </div>
               <div className="space-y-2">
-                <label htmlFor="message" className="text-sm font-medium text-white">문의 내용</label>
+                <label htmlFor="message" className="text-sm font-medium text-foreground">문의 내용</label>
                 <Textarea 
                   id="message" 
                   placeholder="컨설팅 문의, 협력 제안 등 자유롭게 작성해주세요." 

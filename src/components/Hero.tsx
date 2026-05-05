@@ -10,8 +10,8 @@ export function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Gradients */}
       <div className="absolute inset-0 bg-background z-0" />
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] z-0" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] z-0" />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-[120px] z-0" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-[120px] z-0" />
 
       <div className="container mx-auto px-6 relative z-10 text-center">
         <motion.div
@@ -24,9 +24,9 @@ export function Hero() {
             <span>Beyond Consulting, Towards Automation</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-white leading-tight">
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-foreground leading-tight">
             AI 컨설턴트와 함께하는 <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
               기업 회복 전략
             </span>
           </h1>

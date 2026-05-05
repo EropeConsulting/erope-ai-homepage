@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Noto_Sans_KR } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const notoSansKr = Noto_Sans_KR({ 
+  subsets: ["latin"], 
+  weight: ['300', '400', '500', '600', '700', '800'],
+  variable: "--font-sans" 
+});
 
 export const metadata: Metadata = {
   title: "Erope.AI | AI 기반 자동컨설팅 플랫폼",
@@ -16,9 +20,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko" className="dark scroll-smooth">
+    <html lang="ko" className="scroll-smooth">
       <body
-        className={`${inter.variable} font-sans antialiased bg-background text-foreground`}
+        className={`${notoSansKr.variable} font-sans antialiased bg-background text-foreground`}
       >
         {children}
       </body>

@@ -39,7 +39,7 @@ export function Services() {
   ];
 
   return (
-    <section id="services" className="py-24 bg-card/30 border-t border-border/50">
+    <section id="services" className="py-24 bg-muted/30 border-t border-border/50">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <motion.div
@@ -49,7 +49,7 @@ export function Services() {
             transition={{ duration: 0.5 }}
           >
             <h2 className="text-sm font-bold text-primary uppercase tracking-wider mb-2">Our Services</h2>
-            <h3 className="text-3xl md:text-4xl font-bold text-white">
+            <h3 className="text-3xl md:text-4xl font-bold text-foreground">
               성공을 위한 맞춤형 컨설팅
             </h3>
             <p className="text-muted-foreground mt-4">
@@ -67,12 +67,12 @@ export function Services() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
             >
-              <Card className="h-full bg-background/50 border-border/50 hover:border-primary/50 transition-colors duration-300">
+              <Card className="h-full bg-card shadow-sm border-border hover:shadow-md hover:border-primary/50 transition-all duration-300">
                 <CardHeader>
-                  <div className="mb-4 bg-primary/10 w-16 h-16 rounded-xl flex items-center justify-center">
+                  <div className="mb-4 bg-primary/5 w-16 h-16 rounded-xl flex items-center justify-center">
                     {service.icon}
                   </div>
-                  <CardTitle className="text-xl text-white">{service.title}</CardTitle>
+                  <CardTitle className="text-xl text-foreground">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-base text-muted-foreground">
