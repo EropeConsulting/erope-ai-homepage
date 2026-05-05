@@ -38,4 +38,4 @@ npm run dev
 
 ## 연락처 (Contact)
 - **Email:** erope3v@gmail.com
-- **회사명:** Erope.AI (에이로프 에이아이)
+- **회사명:** Erope.AI (이롭 에이아이)
