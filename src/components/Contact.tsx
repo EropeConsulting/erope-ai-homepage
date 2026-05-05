@@ -6,6 +6,7 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Button } from "./ui/button";
 import { Mail, Phone } from "lucide-react";
+import { supabase } from "@/lib/supabase";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -21,7 +22,27 @@ export function Contact() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/erope3v@gmail.com", {
+      // 1. Supabase 데이터베이스에 저장
+      const { error: supabaseError } = await supabase
+        .from('inquiries')
+        .insert([
+          {
+            name: formData.name,
+            company: formData.company,
+            email: formData.email,
+            message: formData.message,
+          }
+        ]);
+
+      if (supabaseError) {
+        console.error("Supabase Error:", supabaseError);
+        alert("문의 접수에 실패했습니다. 잠시 후 다시 시도해주세요.");
+        setIsSubmitting(false);
+        return;
+      }
+
+      // 2. 이메일로 알림 전송 (formsubmit.co 활용)
+      const emailResponse = await fetch("https://formsubmit.co/ajax/erope3v@gmail.com", {
         method: "POST",
         headers: { 
           'Content-Type': 'application/json',
@@ -37,13 +58,15 @@ export function Contact() {
         })
       });
 
-      if (response.ok) {
-        alert("성공적으로 메시지를 전송했습니다! 담당자가 확인 후 연락드리겠습니다.");
+      if (emailResponse.ok) {
+        alert("성공적으로 프로젝트 문의가 접수되었습니다! 담당자가 확인 후 연락드리겠습니다.");
         setFormData({ name: "", company: "", email: "", message: "" });
       } else {
-        alert("메시지 전송에 실패했습니다. 잠시 후 다시 시도해주세요.");
+        console.error("Email API Error:", await emailResponse.text());
+        alert("문의는 접수되었으나, 이메일 알림 전송에 실패했습니다.");
       }
     } catch (error) {
+      console.error("Error:", error);
       alert("오류가 발생했습니다. 잠시 후 다시 시도해주세요.");
     } finally {
       setIsSubmitting(false);

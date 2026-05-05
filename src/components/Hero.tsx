@@ -25,14 +25,14 @@ export function Hero() {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-white leading-tight">
-            AI 기반 자동컨설팅 플랫폼 <br className="hidden md:block" />
+            AI 컨설턴트와 함께하는 <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">
-              정보화전략컨설팅 전문기업
+              기업 회복 전략
             </span>
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Erope.AI는 인공지능과 데이터 기술을 결합하여 기업의 핵심 비즈니스 가치를 극대화하고 성공적인 디지털 트랜스포메이션을 이끕니다.
+            Erope.AI는 전문 컨설턴트의 암묵지와 AI 기술을 결합하여 중소기업, 공공기관, 스타트업의 전략 수립과 정보화 컨설팅을 고도화합니다.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
