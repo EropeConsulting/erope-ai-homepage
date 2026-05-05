@@ -27,7 +27,6 @@ npm install
 npm run dev
 ```
 
-3. 로컬호스트에서는 `http://localhost:3000`으로 접속하여 확인합니다.
 
 ## 배포 가이드 (Vercel)
 
@@ -36,7 +35,6 @@ npm run dev
 2. Vercel 대시보드에서 `New Project`를 클릭하고 해당 리포지토리를 가져옵니다(Import).
 3. 기본 설정(Framework Preset: Next.js, Build Command: `next build`) 그대로 Deploy를 진행합니다.
 
-브라우저에서 `https://erope-ai-homepage.vercel.app/` 으로 접속하여 확인합니다.
 
 ## 연락처 (Contact)
 - **Email:** erope3v@gmail.com
