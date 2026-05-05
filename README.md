@@ -27,7 +27,7 @@ npm install
 npm run dev
 ```
 
-3. 브라우저에서 `http://localhost:3000`으로 접속하여 확인합니다.
+3. 로컬호스트에서는 `http://localhost:3000`으로 접속하여 확인합니다. 브라우저에서 `https://erope-ai-homepage.vercel.app/` 으로 접속하여 확인합니다.
 
 ## 배포 가이드 (Vercel)
 
